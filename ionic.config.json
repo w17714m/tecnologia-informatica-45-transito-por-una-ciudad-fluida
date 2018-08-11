@@ -1,0 +1,7 @@
+{
+  "name": "moviAccesible",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
