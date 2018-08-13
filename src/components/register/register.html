@@ -1,0 +1,36 @@
+<ion-card>
+  <ion-card-content>
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Usuario</ion-label>
+        <ion-input type="text" [(ngModel)]="user.email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="user.pass"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <div padding>
+      <ion-grid>
+        <ion-row>
+          <ion-col >
+            <button ion-button block (click)="registrarUsuario()" >Aceptar 
+              <ion-icon name="md-person"></ion-icon>
+            </button>
+          </ion-col>
+          <ion-col >
+            <button ion-button block (click)="cancelar()" >Cancelar
+              <ion-icon name="md-person"></ion-icon>
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </ion-card-content>
+</ion-card>
+
+
+
+

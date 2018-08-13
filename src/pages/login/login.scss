@@ -1,0 +1,25 @@
+@import '../../../node_modules/include-media/dist/_include-media.scss';
+$url_fondo : 'assets/imgs/fondo.png';
+
+page-login {
+  img{
+    width: 60%;
+    height: 50%;
+  }
+  .container-image{
+    text-align: center;
+  }
+
+  .fondo {
+    background: url($url_fondo) no-repeat;
+    background-size:cover;
+  }
+
+
+  @include media('>=desktop'){
+    img{
+      width: 20%;
+      height: 50%;
+    }
+  }
+}

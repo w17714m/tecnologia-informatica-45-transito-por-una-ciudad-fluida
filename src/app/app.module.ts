@@ -10,6 +10,16 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import {LoginPage} from "../pages/login/login";
+import { LoginUserProvider } from '../providers/login-user/login-user';
+import {AngularFireModule} from "angularfire2";
+import {AngularFireDatabaseModule} from "angularfire2/database";
+import {AngularFireAuthModule} from "angularfire2/auth";
+import {config} from "../config/config";
+import {RegisterComponent} from "../components/register/register";
+
+
+
 
 @NgModule({
   declarations: [
@@ -17,10 +27,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    LoginPage,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
+    AngularFireModule.initializeApp(config),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -29,12 +44,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    LoginPage,
+    RegisterComponent
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    LoginUserProvider
   ]
 })
 export class AppModule {}
