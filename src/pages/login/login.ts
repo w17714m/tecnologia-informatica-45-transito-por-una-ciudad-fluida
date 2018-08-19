@@ -3,6 +3,7 @@ import {AlertController, IonicPage, ModalController, NavController, NavParams} f
 import {LoginUserProvider} from "../../providers/login-user/login-user";
 import {RegisterComponent} from "../../components/register/register";
 import {HomePage} from "../home/home";
+import {SplashPage} from "../splash/splash";
 
 
 /**
@@ -86,5 +87,9 @@ export class LoginPage {
     let profileModal = this.modalCtrl.create(RegisterComponent);
     profileModal.present();
 
+  }
+
+  irSplash(){
+    this.navCtrl.push(SplashPage);
   }
 }

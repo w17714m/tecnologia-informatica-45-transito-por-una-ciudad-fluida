@@ -1,0 +1,66 @@
+page-splash {
+  height: 100%;
+}
+
+.imgBackground {
+  background-image: url("../assets/imgs/splash-image.jpg");
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1 !important;
+}
+.opacity {
+
+}
+
+img{
+  width: 108px;
+  height: 53px;
+}
+
+
+.img-position{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding-top: 30%;
+}
+
+
+.flex-container{
+  display: flex;
+  flex-flow: column;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding-top: 50%;
+  text-align: center;
+
+}
+
+
+.whiteLetter {
+  color: white;
+}
+
+.titulo{
+  font-family: 'Muli';
+  font-weight: 300;
+}
+
+.descripcion{
+  font-family: 'Muli';
+  font-weight: 300;
+  font-size: 14pt;
+}
+
+.mensajepequenio{
+  font-family: 'Muli';
+  font-weight: 300;
+  font-size: 12pt;
+}
+

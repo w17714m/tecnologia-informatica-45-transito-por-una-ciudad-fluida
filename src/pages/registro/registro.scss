@@ -1,0 +1,79 @@
+page-registro {
+
+}
+
+.background-page {
+  background-color: #34374C;
+  height: 100%;
+}
+
+.login_registro {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 72pt;
+}
+
+
+.login-text {
+  font-family: Muli;
+  font-weight: 400;
+  font-size: 8pt;
+  color: white;
+}
+
+
+.tamanio-button {
+  width: 73pt;
+  height: 25pt;
+  border-radius: 12pt;
+}
+
+.espacio {
+  display: flex;
+  flex-direction: column;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 72pt;
+  margin: 0 24pt 0 24pt;
+  color: #959DAD !important;
+}
+
+input {
+  .placeholder-text {
+    color: #959DAD !important;
+  }
+}
+
+.continuar {
+  display: flex;
+  flex-direction: column;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding: 72pt 24pt 0 24pt;
+  color: #959DAD !important;
+}
+
+.continuar-button {
+  width:100%;
+  height: 42pt;
+
+  border-radius: 12pt;
+}
+
+.change-heigth {
+  height: 5px;
+  color:white;
+}
+
+ion-item.item {
+  height: 52pt;
+  .label {
+    color: #959DAD;
+
+  }
+}

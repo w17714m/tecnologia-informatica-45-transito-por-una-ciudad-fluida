@@ -17,6 +17,7 @@ import {AngularFireDatabaseModule} from "angularfire2/database";
 import {AngularFireAuthModule} from "angularfire2/auth";
 import {config} from "../config/config";
 import {RegisterComponent} from "../components/register/register";
+import {SplashPageModule} from "../pages/splash/splash.module";
 
 
 
@@ -28,7 +29,6 @@ import {RegisterComponent} from "../components/register/register";
     ContactPage,
     HomePage,
     TabsPage,
-    LoginPage,
     RegisterComponent
   ],
   imports: [
@@ -36,7 +36,8 @@ import {RegisterComponent} from "../components/register/register";
     AngularFireModule.initializeApp(config),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    SplashPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -45,7 +46,6 @@ import {RegisterComponent} from "../components/register/register";
     ContactPage,
     HomePage,
     TabsPage,
-    LoginPage,
     RegisterComponent
   ],
   providers: [

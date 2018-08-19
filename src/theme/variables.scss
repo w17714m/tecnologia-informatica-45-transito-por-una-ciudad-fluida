@@ -229,6 +229,56 @@ $colors: (
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+$colors: (
+  primary:    #3ACCE1,
+  secondary:  #353A50,
+  danger:     #f53d3d,
+  light:      #f4f4f4,
+  dark:       #222,
+  twitter:    #5773FF
+);
+
+ion-item {
+  border-radius:8pt 8pt;
+  box-shadow: 0 3pt rgba(69,91,99,0.1);
+  height: 42pt !important;
+}
+ion-item.item {
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-bottom: 1px;
+  box-shadow: 0 3pt rgba(69,91,99,0.1);
+  .label {
+    width: 100%;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 1.2em;
+  }
+  ion-input{
+    width: 90%;
+  }
+}
+
+.label-md {
+  margin: 0px 0px 0px 0 !important;
+}
+
+
+
+.width-button{
+  width: 80%;
+  height: 52pt;
+}
+
+.aling-left{
+  float: left;
+}
+
+.aling-right{
+  float: right;
+}
+
+
 
 @import "roboto";
 @import "noto-sans";
+
+

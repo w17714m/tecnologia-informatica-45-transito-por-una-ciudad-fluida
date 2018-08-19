@@ -1,0 +1,22 @@
+<ion-content class="background-page">
+  <div class="login_registro">
+    <div style="width: 15%"></div>
+    <div class="login-text aling-right" [navPush]="'LoginPage'">LOGIN</div>
+    <button ion-button color="twitter" class="tamanio-button login-text" [navPush]="'LoginPage'">Registro</button>
+    <div style="width: 15%"></div>
+  </div>
+  <div class="espacio">
+    <ion-item>
+      <ion-label color="primary" floating>Email</ion-label>
+      <ion-input class="change-heigth" ></ion-input>
+    </ion-item>
+    <br>
+    <ion-item >
+      <ion-label color="primary" floating>Password</ion-label>
+      <ion-input ></ion-input>
+    </ion-item>
+  </div>
+  <div class="continuar">
+    <button ion-button color="twitter" class="continuar-button login-text" [navPush]="'LoginPage'">Continuar</button>
+  </div>
+</ion-content>

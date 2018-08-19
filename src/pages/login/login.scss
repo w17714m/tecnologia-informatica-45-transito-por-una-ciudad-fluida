@@ -1,25 +1,71 @@
 @import '../../../node_modules/include-media/dist/_include-media.scss';
-$url_fondo : '/assets/imgs/fondo.png';
+
+$url_fondo: '/assets/imgs/fondo.png';
 
 page-login {
-  img{
+  height: 100%;
+  img {
     width: 60%;
     height: 50%;
   }
-  .container-image{
+  .container-image {
     text-align: center;
   }
 
   .fondo {
     background: url($url_fondo) no-repeat;
-    background-size:cover;
+    background-size: cover;
   }
 
-
-  @include media('>=desktop'){
-    img{
+  @include media('>=desktop') {
+    img {
       width: 20%;
       height: 50%;
     }
   }
+
+  .titleback{
+    background-image: url("../assets/svgs/title_back.svg");
+    height: 135pt;
+
+    background-position-x: center;
+    background-position-y: -10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1 !important;
+  }
+
+  .formlogin {
+      padding-left: 14pt;
+      display: flex;
+      flex-flow: column;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-right: 24pt;
+  }
+
 }
+.logo{
+  display: flex;
+  flex-flow: column;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.logo >img{
+  width: 108pt;
+  height: 53pt;
+}
+
+.class-description {
+  color:#78849E;
+  font-family: 'Muli';
+  font-weight: 300;
+  font-size: 12pt;
+  padding-top: 33pt;
+  padding-bottom: 24px;
+}
+

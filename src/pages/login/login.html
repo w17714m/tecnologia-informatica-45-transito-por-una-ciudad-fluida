@@ -1,3 +1,28 @@
+<ion-content>
+  <div class="titleback">
+
+  </div>
+
+  <div class="logo">
+      <img src="assets/svgs/icon_login.svg">
+  </div>
+  <div class="formlogin">
+          <ion-item>
+            <ion-label color="primary" floating>Email</ion-label>
+            <ion-input ></ion-input>
+          </ion-item>
+          <ion-item >
+            <ion-label color="primary" floating>Password</ion-label>
+            <ion-input ></ion-input>
+          </ion-item>
+    <h3 class="class-description">Ollvido su contraseña</h3>
+
+    <button ion-button class="width-button" [navPush]="'LoginPage'">Continuar</button>
+    <button ion-button class="width-button"   [navPush]="'RegistroPage'" color="secondary">Registrarse</button>
+  </div>
+</ion-content>
+
+<!--
 <ion-content padding class="fondo">
   <div class="container-image">
     <img src="https://png.icons8.com/ios-glyphs/1600/sporty-wheelchair-user.png">
@@ -50,6 +75,7 @@
       </div>
     </ion-card-content>
   </ion-card>
+  <button ion-button  [navPush]="'SplashPage'" >irTest</button>
 </ion-content>
 
 
@@ -60,3 +86,4 @@
     </ion-title>
   </ion-toolbar>
 </ion-footer>
+-->
