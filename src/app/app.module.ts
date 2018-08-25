@@ -29,7 +29,6 @@ import {SplashPageModule} from "../pages/splash/splash.module";
     ContactPage,
     HomePage,
     TabsPage,
-    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +45,6 @@ import {SplashPageModule} from "../pages/splash/splash.module";
     ContactPage,
     HomePage,
     TabsPage,
-    RegisterComponent
   ],
   providers: [
     StatusBar,

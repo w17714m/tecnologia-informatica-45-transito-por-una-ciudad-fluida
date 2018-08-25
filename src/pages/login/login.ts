@@ -51,7 +51,7 @@ export class LoginPage {
 
       this.loginProvider.loginUser(this.autentication.email, this.autentication.pass).then((data) => {
         console.log('RESULTADO', data);
-        this.navCtrl.push(HomePage);
+        this.navCtrl.push('HomePage');
       }).catch((e) => {
         console.log(e);
         let alert = this.alertCtrl.create({
@@ -82,11 +82,9 @@ export class LoginPage {
       console.log(data);
     });
   }
-
   registro() {
     let profileModal = this.modalCtrl.create(RegisterComponent);
     profileModal.present();
-
   }
 
   irSplash(){
