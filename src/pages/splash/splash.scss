@@ -12,7 +12,12 @@ page-splash {
   z-index: 1 !important;
 }
 .opacity {
-
+  background-color: rgba(31, 44, 44, 0.6);
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
 }
 
 img{
