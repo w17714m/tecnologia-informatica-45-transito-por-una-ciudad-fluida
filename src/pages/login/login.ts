@@ -26,9 +26,7 @@ export class LoginPage {
               public navParams: NavParams,
               public loginProvider: LoginUserProvider,
               private alertCtrl: AlertController,
-              public modalCtrl: ModalController
-  ) {
-  }
+              public modalCtrl: ModalController) {}
 
   ionViewDidLoad() {
     this.loginProvider.user.subscribe((data) => {
