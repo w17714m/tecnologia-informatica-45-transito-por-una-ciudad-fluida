@@ -10,9 +10,12 @@ page-splash {
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 1 !important;
+  -webkit-filter: brightness(0.6);
+  filter: brightness(0.8);
+
 }
 .opacity {
-
+  filter: brightness(1);
 }
 
 img{
@@ -50,6 +53,7 @@ img{
 .titulo{
   font-family: 'Muli';
   font-weight: 300;
+  font-size: 52pt;
 }
 
 .descripcion{

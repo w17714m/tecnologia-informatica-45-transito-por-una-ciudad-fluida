@@ -241,8 +241,9 @@ $colors: (
 ion-item {
   border-radius:8pt 8pt;
   box-shadow: 0 3pt rgba(69,91,99,0.1);
-  height: 42pt !important;
+  //height: 42pt !important;
 }
+
 ion-item.item {
   background-color: rgba(255, 255, 255, 0.1);
   margin-bottom: 1px;
@@ -264,8 +265,12 @@ ion-item.item {
 
 
 .width-button{
-  width: 80%;
-  height: 52pt;
+  width: 327pt;
+  height: 52pt !important;
+  border-radius: 12pt !important;
+  font-family: 'Muli' !important;
+  font-weight: 700 !important;
+  font-size: 15pt !important;
 }
 
 .aling-left{
