@@ -1,3 +1,21 @@
-<ion-content padding>
-  <h1>explorar</h1>
+<ion-content >
+  <agm-map  [styles]="style" style="height: 100%" [latitude]="51.673858" [longitude]="7.815982" [streetViewControl]="false">
+    <agm-marker [iconUrl]="marker.orange"  [latitude]="51.673858" [longitude]="7.815982">
+      <agm-snazzy-info-window [maxWidth]="200" [closeWhenOthersOpen]="true">
+        <ng-template>
+          <div class="container">
+            <div class="custom-img" style="background-image: url(./assets/svgs/orange.svg); width: 50px;height: 50px; text-align: center"></div>
+          </div>
+          <section class="custom-content">
+            <h1 class="custom-header">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, rem!
+              <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, deserunt.</small>
+            </h1>
+            <div class="custom-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto eligendi expedita facilis, id illum impedit molestias nesciunt porro possimus quam sit veniam voluptas voluptates. Deserunt illum minus porro ratione soluta. A autem consequatur dicta, fugit illum impedit ipsam iste itaque iure magnam magni molestiae nemo nihil nostrum odio omnis optio pariatur provident repellat repellendus sapiente ut, vel vero. Ad aliquid amet architecto asperiores aut consequuntur debitis doloribus ea eveniet facilis fuga harum illo, ipsa iusto laboriosam laudantium magnam nemo perferendis placeat porro quasi quia quibusdam quod quos suscipit velit vitae. Aliquam beatae cupiditate eos ex in laudantium obcaecati optio voluptate?</div>
+          </section>
+
+        </ng-template>
+      </agm-snazzy-info-window>
+    </agm-marker>
+  </agm-map>
 </ion-content>

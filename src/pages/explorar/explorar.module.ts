@@ -1,6 +1,9 @@
-import { NgModule } from '@angular/core';
-import { IonicPageModule } from 'ionic-angular';
-import { ExplorarPage } from './explorar';
+import {NgModule} from '@angular/core';
+import {IonicPageModule} from 'ionic-angular';
+import {ExplorarPage} from './explorar';
+import {AgmCoreModule} from "@agm/core";
+import {AgmSnazzyInfoWindowModule} from '@agm/snazzy-info-window';
+import {apiKeyGoogle} from "../../config/config";
 
 @NgModule({
   declarations: [
@@ -8,6 +11,11 @@ import { ExplorarPage } from './explorar';
   ],
   imports: [
     IonicPageModule.forChild(ExplorarPage),
+    AgmCoreModule.forRoot({
+      apiKey: apiKeyGoogle
+    }),
+    AgmSnazzyInfoWindowModule
   ],
 })
-export class ExplorarPageModule {}
+export class ExplorarPageModule {
+}
