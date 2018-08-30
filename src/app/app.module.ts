@@ -35,7 +35,14 @@ import {SplashPageModule} from "../pages/splash/splash.module";
     AngularFireModule.initializeApp(config),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp,{
+    menuType: 'push',
+      platforms: {
+        ios: {
+          menuType: 'overlay',
+        }
+    }
+    }),
     SplashPageModule
   ],
   bootstrap: [IonicApp],

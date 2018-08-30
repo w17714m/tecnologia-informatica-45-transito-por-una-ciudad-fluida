@@ -1,6 +1,8 @@
-<ion-content >
-  <agm-map  [styles]="style" style="height: 100%" [latitude]="51.673858" [longitude]="7.815982" [streetViewControl]="false">
-    <agm-marker [iconUrl]="marker.orange"  [latitude]="51.673858" [longitude]="7.815982">
+<menu-opciones [variableContenedor]="menuPrincipal"></menu-opciones>
+
+<ion-content #menuPrincipal>
+  <agm-map   [styles]="style" style="height: calc(100% - 170pt);z-index: -1" [latitude]="4.686222" [longitude]="-74.059723" [streetViewControl]="false">
+    <agm-marker [iconUrl]="marker.orange"  [latitude]="4.686222" [longitude]="-74.059723">
       <agm-snazzy-info-window [maxWidth]="200" [closeWhenOthersOpen]="true">
         <ng-template>
           <div class="container">
@@ -17,4 +19,7 @@
       </agm-snazzy-info-window>
     </agm-marker>
   </agm-map>
+
+  <menu-inferior></menu-inferior>
+
 </ion-content>
