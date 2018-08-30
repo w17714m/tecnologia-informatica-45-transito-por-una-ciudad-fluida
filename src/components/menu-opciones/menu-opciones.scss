@@ -1,0 +1,31 @@
+menu-opciones {
+  .fondo{
+    background: url("/assets/imgs/fondo_menu.png") no-repeat center center fixed;
+    height: 205pt;
+    width: 100%;
+    background-position: 0 0 100% 100%;
+    background-color: #2A2E43;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .contenedor_p{
+    padding-left: 10%;
+    padding-left: 10%;
+    padding-top: 5%;
+
+  }
+
+  .contenedor_p>img{
+    margin-top: 30px;
+    width: 52pt;
+    height: 52pt;
+  }
+
+
+  .contenedor_p>p{
+    color:#ffffff;
+  }
+}
