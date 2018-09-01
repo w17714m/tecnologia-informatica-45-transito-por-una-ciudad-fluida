@@ -1,24 +1,47 @@
-<ion-content>
-  <div class="titleback">
 
-  </div>
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons left>
+      <button ion-button icon-only color="royal" navPop>
+        <ion-icon name="arrow-round-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title text-center>Ingreso</ion-title>
+  </ion-toolbar>
+</ion-header>
 
-  <div class="logo">
+<ion-content padding text-center>
+  <div class="containerLogin">
+    <div class="logo">
       <img src="assets/svgs/icon_login.svg">
+    </div>
+    <ion-list>
+      <ion-item>
+        <ion-label color="primary" floating>Email:</ion-label>
+        <ion-input type="email" name="email" [(ngModel)]="usuario.email" autocapitalize="off"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" floating>Password</ion-label>
+        <ion-input type="password" name="password" [(ngModel)]="usuario.password"></ion-input>
+      </ion-item>
+    </ion-list>
+    <h3 class="class-description" >Olvido su contraseña</h3>
+    <button ion-button class="width-button botonLogin" (click)="continuar()">Continuar</button>
+    <button ion-button class="width-button botonLogin" (click)="registroModal()" color="secondary">Registrarse</button>
   </div>
-  <div class="formlogin">
-          <ion-item>
-            <ion-label color="primary" floating>Email</ion-label>
-            <ion-input ></ion-input>
-          </ion-item>
-          <ion-item >
-            <ion-label color="primary" floating>Password</ion-label>
-            <ion-input ></ion-input>
-          </ion-item>
-    <h3 class="class-description">Ollvido su contraseña</h3>
 
+  <!--
+  <div class="formlogin">
+    <ion-item>
+      <ion-label color="primary" floating>Email</ion-label>
+      <ion-input ></ion-input>
+    </ion-item>
+    <ion-item >
+      <ion-label color="primary" floating>Password</ion-label>
+      <ion-input ></ion-input>
+    </ion-item>
+    <h3 class="class-description">Olvido su contraseña</h3>
     <button ion-button class="width-button" [navPush]="'LoginPage'">Continuar</button>
     <button ion-button class="width-button"   [navPush]="'RegistroPage'" color="secondary">Registrarse</button>
-    <button ion-button class="width-button"   [navPush]="'BienvenidoPage'" color="secondary">Bienvenido</button>
-  </div>
+  </div>-->
 </ion-content>

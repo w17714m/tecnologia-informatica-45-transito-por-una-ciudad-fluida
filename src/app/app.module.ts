@@ -18,6 +18,7 @@ import {AngularFireAuthModule} from "angularfire2/auth";
 import {config} from "../config/config";
 import {RegisterComponent} from "../components/register/register";
 import {SplashPageModule} from "../pages/splash/splash.module";
+import { ServiciosProvider } from '../providers/servicios/servicios';
 
 
 
@@ -27,7 +28,6 @@ import {SplashPageModule} from "../pages/splash/splash.module";
     MyApp,
     AboutPage,
     ContactPage,
-    HomePage,
     TabsPage,
   ],
   imports: [
@@ -50,14 +50,14 @@ import {SplashPageModule} from "../pages/splash/splash.module";
     MyApp,
     AboutPage,
     ContactPage,
-    HomePage,
     TabsPage,
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    LoginUserProvider
+    LoginUserProvider,
+    ServiciosProvider
   ]
 })
 export class AppModule {}

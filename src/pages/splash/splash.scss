@@ -15,7 +15,12 @@ page-splash {
 
 }
 .opacity {
-  filter: brightness(1);
+  background-color: rgba(31, 44, 44, 0.6);
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
 }
 
 img{
@@ -45,7 +50,6 @@ img{
 
 }
 
-
 .whiteLetter {
   color: white;
 }
@@ -67,4 +71,15 @@ img{
   font-weight: 300;
   font-size: 12pt;
 }
-
+.botonSplash{
+  border-radius: 12px 12px 12px 12px;
+  -moz-border-radius: 12px 12px 12px 12px;
+  -webkit-border-radius: 12px 12px 12px 12px;
+  height: 50px;
+}
+.emailSplash{
+  background-color: #3ACCE1;
+}
+.fcbSplash{
+  background-color: #353A50;
+}
