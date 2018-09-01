@@ -1,10 +1,10 @@
-import {Component} from '@angular/core';
-import {AlertController, IonicPage, ModalController, NavController, NavParams} from 'ionic-angular';
+import {Component,OnInit} from '@angular/core';
+import {AlertController, IonicPage, ModalController, NavController, NavParams,ToastController } from 'ionic-angular';
 import {LoginUserProvider} from "../../providers/login-user/login-user";
 import {RegisterComponent} from "../../components/register/register";
 import {HomePage} from "../home/home";
 import {SplashPage} from "../splash/splash";
-
+import {ServiciosProvider} from '../../providers/servicios/servicios';
 
 /**
  * Generated class for the LoginPage page.
@@ -13,22 +13,63 @@ import {SplashPage} from "../splash/splash";
  * Ionic pages and navigation.
  */
 
-@IonicPage()
-@Component({
-  selector: 'page-login',
-  templateUrl: 'login.html',
-})
-export class LoginPage {
+ @IonicPage()
+ @Component({
+ 	selector: 'page-login',
+ 	templateUrl: 'login.html',
+ 	providers:[ServiciosProvider]
+ })
+ export class LoginPage implements OnInit{
 
+ 	public usuario = { email : '', password : ''};
+
+ 	constructor(private servicioDB:ServiciosProvider,public toastCtrl : ToastController,public modalCtrl: ModalController){
+ 	}
+
+ 	ngOnInit(){
+ 		this.servicioDB.logoutUser();
+ 	}
+ 	registroModal() {
+ 		let profileModal = this.modalCtrl.create('RegistroPage');
+ 		profileModal.present();
+ 	}
+ 	//registro(){
+ 		/*this.servicioDB.registerUser(this.usuario.email,this.usuario.password)
+ 		.then((user) => {
+ 			console.log("user", user);
+      // El usuario se ha creado correctamente
+    })
+ 		.catch((err)=>{
+ 			console.log("err", err);
+ 			let toast = this.toastCtrl.create({
+ 				message: 'La dirección de correo electrónico ya está siendo utilizada por otra cuenta.',
+ 				showCloseButton: true,
+ 				closeButtonText: 'Aceptar',
+ 				cssClass: "errorToast",
+ 			});
+ 			toast.present();
+ 		});*/
+ 	//}
+
+ 	continuar(){
+ 		this.servicioDB.login(this.usuario.email,this.usuario.password ).then((user:any) => {
+ 			console.log("user", user);
+ 		})
+ 		.catch(err=>{
+ 			console.log("err", err);
+ 		})
+ 	}
+ 	cerrarSesion(){
+ 		this.servicioDB.logoutUser();
+ 	}
+/*
   autentication = {email: '', pass: ''};
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
               public loginProvider: LoginUserProvider,
               private alertCtrl: AlertController,
-              public modalCtrl: ModalController
-  ) {
-  }
+              public modalCtrl: ModalController) {}
 
   ionViewDidLoad() {
     this.loginProvider.user.subscribe((data) => {
@@ -90,4 +131,6 @@ export class LoginPage {
   irSplash(){
     this.navCtrl.push(SplashPage);
   }
+
+  */
 }
