@@ -10,7 +10,8 @@ import {AlertController,  ViewController} from "ionic-angular";
  */
 @Component({
   selector: 'register',
-  templateUrl: 'register.html'
+  templateUrl: 'register.html',
+  styleUrls:['register.scss']
 })
 export class RegisterComponent {
   public user={email:'',pass:''};

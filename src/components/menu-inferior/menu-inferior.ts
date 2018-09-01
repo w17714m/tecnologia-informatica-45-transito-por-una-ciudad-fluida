@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
  */
 @Component({
   selector: 'menu-inferior',
-  templateUrl: 'menu-inferior.html'
+  templateUrl: 'menu-inferior.html',
 })
 export class MenuInferiorComponent {
 

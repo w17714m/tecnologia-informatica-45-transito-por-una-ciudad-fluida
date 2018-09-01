@@ -72,6 +72,7 @@ page-login {
 .containerLogin{
   margin-top:10%;
   position:relative;
+  top:29pt;
 }
 
 .botonLogin{
@@ -90,4 +91,9 @@ page-login {
     -moz-border-radius: 12px 12px 12px 12px;
     -webkit-border-radius: 12px 12px 12px 12px;
   }
+}
+
+
+.space-login{
+  height: 25pt;
 }

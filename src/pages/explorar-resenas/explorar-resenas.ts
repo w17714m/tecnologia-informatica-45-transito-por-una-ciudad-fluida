@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {markerIcons, styleMap} from "../../model/MapVariables";
+import {markerIcons, styleMap} from "../../providers/servicios/MapVariables";
 
 /**
  * Generated class for the ExplorarResenasPage page.
@@ -13,6 +13,7 @@ import {markerIcons, styleMap} from "../../model/MapVariables";
 @Component({
   selector: 'page-explorar-resenas',
   templateUrl: 'explorar-resenas.html',
+  styleUrls: ['explorar-resenas.scss'],
 })
 export class ExplorarResenasPage {
   style=styleMap;

@@ -15,6 +15,7 @@
     <div class="logo">
       <img src="assets/svgs/icon_login.svg">
     </div>
+    <div class="space-login"></div>
     <ion-list>
       <ion-item>
         <ion-label color="primary" floating>Email:</ion-label>
@@ -25,23 +26,9 @@
         <ion-input type="password" name="password" [(ngModel)]="usuario.password"></ion-input>
       </ion-item>
     </ion-list>
+    <div class="space-login"></div>
     <h3 class="class-description" >Olvido su contraseña</h3>
     <button ion-button class="width-button botonLogin" (click)="continuar()">Continuar</button>
     <button ion-button class="width-button botonLogin" (click)="registroModal()" color="secondary">Registrarse</button>
   </div>
-
-  <!--
-  <div class="formlogin">
-    <ion-item>
-      <ion-label color="primary" floating>Email</ion-label>
-      <ion-input ></ion-input>
-    </ion-item>
-    <ion-item >
-      <ion-label color="primary" floating>Password</ion-label>
-      <ion-input ></ion-input>
-    </ion-item>
-    <h3 class="class-description">Olvido su contraseña</h3>
-    <button ion-button class="width-button" [navPush]="'LoginPage'">Continuar</button>
-    <button ion-button class="width-button"   [navPush]="'RegistroPage'" color="secondary">Registrarse</button>
-  </div>-->
 </ion-content>

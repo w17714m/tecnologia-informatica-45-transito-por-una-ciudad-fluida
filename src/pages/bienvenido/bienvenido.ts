@@ -12,6 +12,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 @Component({
   selector: 'page-bienvenido',
   templateUrl: 'bienvenido.html',
+  styleUrls:['bienvenido.scss']
 })
 export class BienvenidoPage {
 

@@ -33,23 +33,6 @@ import {ServiciosProvider} from '../../providers/servicios/servicios';
  		let profileModal = this.modalCtrl.create('RegistroPage');
  		profileModal.present();
  	}
- 	//registro(){
- 		/*this.servicioDB.registerUser(this.usuario.email,this.usuario.password)
- 		.then((user) => {
- 			console.log("user", user);
-      // El usuario se ha creado correctamente
-    })
- 		.catch((err)=>{
- 			console.log("err", err);
- 			let toast = this.toastCtrl.create({
- 				message: 'La dirección de correo electrónico ya está siendo utilizada por otra cuenta.',
- 				showCloseButton: true,
- 				closeButtonText: 'Aceptar',
- 				cssClass: "errorToast",
- 			});
- 			toast.present();
- 		});*/
- 	//}
 
  	continuar(){
  		this.servicioDB.login(this.usuario.email,this.usuario.password ).then((user:any) => {

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {IonicPage, MenuController, NavController, NavParams} from 'ionic-angular';
-import {styleMap} from "../../model/MapVariables";
+import {styleMap} from "../../providers/servicios/MapVariables";
 
 /**
  * Generated class for the ExplorarPage page.
@@ -13,6 +13,7 @@ import {styleMap} from "../../model/MapVariables";
 @Component({
   selector: 'page-explorar',
   templateUrl: 'explorar.html',
+  styleUrls:['explorar.scss']
 })
 export class ExplorarPage {
   style=styleMap;

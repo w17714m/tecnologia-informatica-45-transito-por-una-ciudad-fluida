@@ -16,8 +16,9 @@ import {AngularFireModule} from "angularfire2";
 import {AngularFireDatabaseModule} from "angularfire2/database";
 import {AngularFireAuthModule} from "angularfire2/auth";
 import {config} from "../config/config";
-import {RegisterComponent} from "../components/register/register";
+
 import {SplashPageModule} from "../pages/splash/splash.module";
+import {ServiciosProvider} from "../providers/servicios/servicios";
 
 
 

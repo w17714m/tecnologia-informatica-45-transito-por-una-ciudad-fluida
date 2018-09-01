@@ -10,7 +10,7 @@ import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'menu-opciones',
-  templateUrl: 'menu-opciones.html'
+  templateUrl: 'menu-opciones.html',
 })
 export class MenuOpcionesComponent {
 

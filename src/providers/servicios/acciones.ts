@@ -15,6 +15,8 @@ import { IonicPage, NavController, NavParams,ToastController,LoadingController  
   export class AccionesProvider {
 
   	private db: AngularFireDatabase;
+  	private loadCustom;
+
   	constructor(db: AngularFireDatabase,private afAuth :  AngularFireAuth,
   		public loadingCtrl: LoadingController) {    
   		this.db = db;
@@ -26,4 +28,16 @@ import { IonicPage, NavController, NavParams,ToastController,LoadingController  
   		});
   		loader.present();
   	}
+
+    show(mensaje?:string ) {
+      this.loadCustom = this.loadingCtrl.create({
+        content: mensaje==undefined?'Cargando..':mensaje,
+        duration: 3000
+      });
+      this.loadCustom.present();
+    }
+
+    hide() {
+      this.loadCustom.hide();
+    }
   }

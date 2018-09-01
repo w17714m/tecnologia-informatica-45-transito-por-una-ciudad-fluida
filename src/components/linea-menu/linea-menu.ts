@@ -8,7 +8,7 @@ import {Component, Input} from '@angular/core';
  */
 @Component({
   selector: 'linea-menu',
-  templateUrl: 'linea-menu.html'
+  templateUrl: 'linea-menu.html',
 })
 export class LineaMenuComponent {
 

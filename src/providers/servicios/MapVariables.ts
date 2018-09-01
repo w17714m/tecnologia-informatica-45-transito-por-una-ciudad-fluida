@@ -79,7 +79,8 @@ export const styleMap = [
   }
 ];
 
-export const markerIcons = {red:{
+export const markerIcons = {
+  red:{
     url: './assets/svgs/red.svg',
     scaledSize: {
       width: 50,

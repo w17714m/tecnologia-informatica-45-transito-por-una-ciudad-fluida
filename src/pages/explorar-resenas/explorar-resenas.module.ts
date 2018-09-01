@@ -4,7 +4,7 @@ import { ExplorarResenasPage } from './explorar-resenas';
 import {AgmCoreModule} from "@agm/core";
 import {apiKeyGoogle} from "../../config/config";
 import {AgmSnazzyInfoWindowModule} from "@agm/snazzy-info-window";
-import {ComponenteModule} from "../../components/componente.module";
+
 
 
 @NgModule({

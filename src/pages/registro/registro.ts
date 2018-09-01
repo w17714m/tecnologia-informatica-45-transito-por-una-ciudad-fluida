@@ -14,6 +14,7 @@ import {HomePage} from '../home/home'
  @Component({
  	selector: 'page-registro',
  	templateUrl: 'registro.html',
+ 	styleUrls: ['registro.scss'],
  	providers:[ServiciosProvider,AccionesProvider]
  })
  export class RegistroPage {
