@@ -47,7 +47,6 @@ img{
 
 }
 
-
 .whiteLetter {
   color: white;
 }
@@ -68,4 +67,15 @@ img{
   font-weight: 300;
   font-size: 12pt;
 }
-
+.botonSplash{
+  border-radius: 12px 12px 12px 12px;
+  -moz-border-radius: 12px 12px 12px 12px;
+  -webkit-border-radius: 12px 12px 12px 12px;
+  height: 50px;
+}
+.emailSplash{
+  background-color: #3ACCE1;
+}
+.fcbSplash{
+  background-color: #353A50;
+}

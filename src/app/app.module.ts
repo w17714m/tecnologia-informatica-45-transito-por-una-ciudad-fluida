@@ -28,7 +28,6 @@ import { ServiciosProvider } from '../providers/servicios/servicios';
     MyApp,
     AboutPage,
     ContactPage,
-    HomePage,
     TabsPage,
     RegisterComponent
   ],
@@ -45,7 +44,6 @@ import { ServiciosProvider } from '../providers/servicios/servicios';
     MyApp,
     AboutPage,
     ContactPage,
-    HomePage,
     TabsPage,
     RegisterComponent
   ],

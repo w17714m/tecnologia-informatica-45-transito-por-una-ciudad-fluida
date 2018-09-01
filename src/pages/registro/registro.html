@@ -1,22 +1,31 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons left>
+      <button ion-button icon-only color="royal">
+        <ion-icon class="buttonEnd" name="arrow-round-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title text-center>Registro</ion-title>  
+    <ion-buttons right >
+      <button ion-button icon-only color="royal" navPop>
+        <ion-icon  name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
 <ion-content class="background-page">
-  <div class="login_registro">
-    <div style="width: 15%"></div>
-    <div class="login-text aling-right" [navPush]="'LoginPage'">LOGIN</div>
-    <button ion-button color="twitter" class="tamanio-button login-text" [navPush]="'LoginPage'">Registro</button>
-    <div style="width: 15%"></div>
-  </div>
   <div class="espacio">
     <ion-item>
       <ion-label color="primary" floating>Email</ion-label>
-      <ion-input class="change-heigth" ></ion-input>
+      <ion-input class="change-heigth" type="email" name="email" [(ngModel)]="usuario.email" autocapitalize="off"></ion-input>
     </ion-item>
     <br>
     <ion-item >
       <ion-label color="primary" floating>Password</ion-label>
-      <ion-input ></ion-input>
+      <ion-input type="password" name="password" [(ngModel)]="usuario.password"></ion-input>
     </ion-item>
   </div>
   <div class="continuar">
-    <button ion-button color="twitter" class="continuar-button login-text" [navPush]="'LoginPage'">Continuar</button>
+    <button ion-button color="twitter" class="continuar-button login-text" (click)="crear()">Continuar</button>
   </div>
 </ion-content>
