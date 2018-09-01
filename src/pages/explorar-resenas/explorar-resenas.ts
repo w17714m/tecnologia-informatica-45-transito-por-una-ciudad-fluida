@@ -13,7 +13,6 @@ import {markerIcons, styleMap} from "../../providers/servicios/MapVariables";
 @Component({
   selector: 'page-explorar-resenas',
   templateUrl: 'explorar-resenas.html',
-  styleUrls: ['explorar-resenas.scss'],
 })
 export class ExplorarResenasPage {
   style=styleMap;
