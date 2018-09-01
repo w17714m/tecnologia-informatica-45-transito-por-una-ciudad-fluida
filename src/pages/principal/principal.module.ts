@@ -1,21 +1,19 @@
 import { NgModule } from '@angular/core';
-import { IonicPageModule } from 'ionic-angular';
+import {IonicModule, IonicPageModule} from 'ionic-angular';
 import { PrincipalPage } from './principal';
 import {AgmCoreModule} from "@agm/core";
 import {apiKeyGoogle} from "../../config/config";
 import {AgmSnazzyInfoWindowModule} from "@agm/snazzy-info-window";
-import {MenuInferiorComponent} from "../../components/menu-inferior/menu-inferior";
-import {LineaMenuComponent} from "../../components/linea-menu/linea-menu";
-import {MenuOpcionesComponent} from "../../components/menu-opciones/menu-opciones";
+import {ComponentsModule} from "../../components/components.module";
+
+
 
 @NgModule({
   declarations: [
     PrincipalPage,
-    MenuInferiorComponent,
-    LineaMenuComponent,
-    MenuOpcionesComponent
   ],
   imports: [
+    IonicModule,
     IonicPageModule.forChild(PrincipalPage),
     AgmCoreModule.forRoot({
       apiKey: apiKeyGoogle

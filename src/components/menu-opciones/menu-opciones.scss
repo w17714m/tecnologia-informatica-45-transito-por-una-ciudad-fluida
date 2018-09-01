@@ -1,4 +1,33 @@
 menu-opciones {
+  .container-menu{
+    padding-left: 35pt;
+    padding-top: 13pt;
+    font-family: 'Muli';
+    font-size: 18pt;
+    color: #454F63;
+  }
+
+  .icono{
+    width: 17pt;
+    height: 22pt;
+  }
+
+  .texto{
+    width: auto;
+  }
+
+  .row-menu{
+    display: grid;
+    grid-template-columns: 17pt auto;
+    grid-template-rows: 22pt;
+    column-gap: 20pt;
+    margin-bottom: 20pt;
+  }
+
+  .row-menu:active{
+    background-color: rgba(0,0,0,0.1);
+  }
+
   .fondo{
     background: url("/assets/imgs/fondo_menu.png") no-repeat center center fixed;
     height: 205pt;
@@ -11,19 +40,33 @@ menu-opciones {
     background-size: cover;
   }
 
-  .contenedor_p{
-    padding-left: 10%;
-    padding-left: 10%;
-    padding-top: 5%;
-
+  .contenedor_pi{
+    padding-left: 32pt;
+    padding-bottom: 45pt;
+    padding-top: 50pt;
+    width: 100%;
+    height: 48pt;
   }
 
-  .contenedor_p>img{
-    margin-top: 30px;
-    width: 52pt;
-    height: 52pt;
+  .contenedor_pi>img{
+    width: 53pt;
+    height: 53pt;
   }
 
+  .contenedor_pi>h3{
+    margin-top: 15pt;
+    color: white;
+    font-family: 'Muli';
+    font-size: 19pt;
+    font-weight: bold;
+  }
+  .contenedor_pi>h4{
+    margin-top: 15pt;
+    color: #d1d1d1;
+    font-family: 'Muli';
+    font-size: 14pt;
+    font-weight: 300;
+  }
 
   .contenedor_p>p{
     color:#ffffff;

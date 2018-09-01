@@ -15,14 +15,13 @@ import {Component, Input} from '@angular/core';
 export class MenuOpcionesComponent {
 
   @Input()
-  variableContenedor:any;
+  public variableContenedor:any;
 
 
   text: string;
 
   constructor() {
-    console.log('Hello MenuOpcionesComponent Component');
-    this.text = 'Hello World';
+
   }
 
 }

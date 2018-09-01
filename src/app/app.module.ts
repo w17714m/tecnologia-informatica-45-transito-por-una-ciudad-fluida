@@ -18,6 +18,13 @@ import {AngularFireAuthModule} from "angularfire2/auth";
 import {config} from "../config/config";
 import {RegisterComponent} from "../components/register/register";
 import {SplashPageModule} from "../pages/splash/splash.module";
+import {CommonModule} from "@angular/common";
+import {MenuInferiorComponent} from "../components/menu-inferior/menu-inferior";
+import {LineaMenuComponent} from "../components/linea-menu/linea-menu";
+import {MenuOpcionesComponent} from "../components/menu-opciones/menu-opciones";
+import {MenuInferiorResenaComponent} from "../components/menu-inferior-resena/menu-inferior-resena";
+import {ComponentsModule} from "../components/components.module";
+
 
 
 
@@ -43,7 +50,8 @@ import {SplashPageModule} from "../pages/splash/splash.module";
         }
     }
     }),
-    SplashPageModule
+    SplashPageModule,
+    ComponentsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

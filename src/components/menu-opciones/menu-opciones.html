@@ -1,37 +1,63 @@
 <ion-menu [content]="variableContenedor">
   <ion-content>
     <div class="fondo">
-      <div class="contenedor_p">
-        <img src="/assets/imgs/avatar.png" >
-        <br>
-        <p>William</p>
-        <br>
-        @William
+      <div class="contenedor_pi">
+        <img src="/assets/imgs/avatar.png">
+        <h3>Hola Usuario</h3>
+        <h4>@Usuario</h4>
       </div>
     </div>
+    <linea-menu [recta]="true"></linea-menu>
     <div class="menu"></div>
 
+    <div class="container-menu">
 
+        <div class="row-menu" [navPush]="'PrincipalPage'">
+          <div>
+            <img class="icono" src="./assets/svgs/point.svg">
+          </div>
+          <div >Explorar</div>
+        </div>
 
-    <ion-list-header>
-      menú principal
-    </ion-list-header>
-    <ion-list>
-      <ion-item-divider>
-        Explorar
-      </ion-item-divider>
-      <ion-item-divider>
-        Reseñas
-      </ion-item-divider>
-      <ion-item-divider>
-        Planear Ruta
-      </ion-item-divider>
-      <ion-item-divider>
-        Amigos
-      </ion-item-divider>
-      <ion-item-divider>
-        Mensajes
-      </ion-item-divider>
-    </ion-list>
+      <div class="row-menu" [navPush]="'ExplorarResenasPage'">
+        <div>
+          <img class="icono" src="./assets/svgs/corazon.svg">
+        </div>
+        <div >Reseñas</div>
+      </div>
+
+      <div class="row-menu">
+        <div>
+          <img class="icono" src="./assets/svgs/plan.svg">
+        </div>
+        <div >Planear Rutas</div>
+      </div>
+
+      <div class="row-menu">
+        <div>
+          <img class="icono" src="./assets/svgs/amigos.svg">
+        </div>
+        <div >Amigos</div>
+      </div>
+      <div class="row-menu">
+        <div>
+          <img class="icono" src="./assets/svgs/mensajes.svg">
+        </div>
+        <div >Mensajes</div>
+      </div>
+      <div class="row-menu">
+        <div>
+          <img class="icono" src="./assets/svgs/acerca.svg">
+        </div>
+        <div >Acerca de..</div>
+      </div>
+      <div class="row-menu">
+        <div>
+          <img class="icono" src="./assets/svgs/logout.svg">
+        </div>
+        <div >Logout</div>
+      </div>
+
+    </div>
   </ion-content>
 </ion-menu>

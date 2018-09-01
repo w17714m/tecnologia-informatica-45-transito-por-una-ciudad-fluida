@@ -78,3 +78,25 @@ export const styleMap = [
     ]
   }
 ];
+
+export const markerIcons = {red:{
+    url: './assets/svgs/red.svg',
+    scaledSize: {
+      width: 50,
+      height: 50
+    }
+  }
+  ,orange:{
+    url: './assets/svgs/orange.svg',
+    scaledSize: {
+      width: 50,
+      height: 50
+    }
+  }
+  ,green:{
+    url: './assets/svgs/green.svg',
+    scaledSize: {
+      width: 50,
+      height: 50
+    }
+  }};

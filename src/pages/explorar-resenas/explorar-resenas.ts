@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {markerIcons, styleMap} from "../../model/MapVariables";
 
 /**
- * Generated class for the PrincipalPage page.
+ * Generated class for the ExplorarResenasPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,16 +11,17 @@ import {markerIcons, styleMap} from "../../model/MapVariables";
 
 @IonicPage()
 @Component({
-  selector: 'page-principal',
-  templateUrl: 'principal.html',
+  selector: 'page-explorar-resenas',
+  templateUrl: 'explorar-resenas.html',
 })
-export class PrincipalPage {
+export class ExplorarResenasPage {
   style=styleMap;
   marker = markerIcons;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {console.log('ionViewDidLoad PrincipalPage');
+  ionViewDidLoad() {
+
   }
 
 }
