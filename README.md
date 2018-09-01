@@ -33,14 +33,14 @@ Generar una app que permita a las personas con discapacidad (en silla de ruedas)
 ![enter image description here](tecnologia-informatica-45-transito-por-una-ciudad-fluida/prototype/splash.png)
 
 ## Pantallla de login
-![enter image description here](tecnologia-informatica-45-transito-por-una-ciudad-fluida/prototype/login.png)
+![enter image description here](/prototype/login.png)
 
 ## Pantalla de bienvenida
 
-![enter image description here](tecnologia-informatica-45-transito-por-una-ciudad-fluida/prototype/bienvenida.png)
+![enter image description here](/prototype/bienvenida.png)
 
 ## Pantalla principal
-![enter image description here](tecnologia-informatica-45-transito-por-una-ciudad-fluida/prototype/Explorar%20Rese%C3%B1as.png)
+![enter image description here](/prototype/Explorar%20Rese%C3%B1as.png)
 
 ## Otras Pantallas 
 
