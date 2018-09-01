@@ -18,7 +18,7 @@ import {ComponenteModule} from "../../components/componente.module";
       apiKey: apiKeyGoogle
     }),
     AgmSnazzyInfoWindowModule,
-    ComponenteModule
+
   ],
 })
 export class ExplorarResenasPageModule {}
