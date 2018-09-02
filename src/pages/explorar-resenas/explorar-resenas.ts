@@ -9,7 +9,7 @@ import {markerIcons, styleMap} from "../../providers/servicios/MapVariables";
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+@IonicPage({name:'page-explorar-resenas'})
 @Component({
   selector: 'page-explorar-resenas',
   templateUrl: 'explorar-resenas.html',

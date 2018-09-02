@@ -4,12 +4,14 @@ import { ExplorarResenasPage } from './explorar-resenas';
 import {AgmCoreModule} from "@agm/core";
 import {apiKeyGoogle} from "../../config/config";
 import {AgmSnazzyInfoWindowModule} from "@agm/snazzy-info-window";
+import {MenuOpcionesComponent} from "../../components/menu-opciones/menu-opciones";
 
 
 
 @NgModule({
   declarations: [
     ExplorarResenasPage,
+    MenuOpcionesComponent,
   ],
   imports: [
 
@@ -20,5 +22,6 @@ import {AgmSnazzyInfoWindowModule} from "@agm/snazzy-info-window";
     AgmSnazzyInfoWindowModule,
 
   ],
+
 })
 export class ExplorarResenasPageModule {}

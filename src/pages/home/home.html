@@ -1,12 +1,22 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+  <ion-toolbar color="secondary">
+    <ion-buttons left>
+      <button ion-button icon-only color="royal" menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title text-center>Ingreso</ion-title>
+    <ion-buttons right>
+      <button ion-button icon-only color="royal"  (click)="logout()"   navPop>
+        <ion-icon name="md-exit"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
 <menu-opciones [variableContenedor]="menuPrincipal"></menu-opciones>
 
 <ion-content #menuPrincipal>
-  <agm-map   [styles]="style" style="height: calc(100% - 170pt);z-index: -1" [latitude]="4.686222" [longitude]="-74.059723" [streetViewControl]="false">
+  <agm-map   [styles]="style" style="height: calc(100%);z-index: -1" [latitude]="4.686222" [longitude]="-74.059723" [streetViewControl]="false">
     <agm-marker [iconUrl]="marker.orange"  [latitude]="4.686222" [longitude]="-74.059723">
       <agm-snazzy-info-window [maxWidth]="200" [closeWhenOthersOpen]="true">
         <ng-template>
@@ -24,5 +34,4 @@
       </agm-snazzy-info-window>
     </agm-marker>
   </agm-map>
-  <menu-inferior></menu-inferior>
 </ion-content>

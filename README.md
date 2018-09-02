@@ -67,3 +67,13 @@ export const apiKeyGoogle = '{{googleKey}}';
 
 
 para encontrar mas información de como configurar estas variables de autenticación ir a :[Configuración Firebase](https://developers-latam.googleblog.com/2016/11/como-usar-firebase-en-una-extension-de.html) y [Google key](https://www.youtube.com/watch?v=zH5QCoU_8do)
+
+
+# Modelo datos
+
+comentarios-->		
+	              descripcion	
+	              fecha	
+	              calificacion	123
+	              imagen
+	              idUsuario	

@@ -5,6 +5,7 @@ import {RegisterComponent} from "../../components/register/register";
 import {HomePage} from "../home/home";
 import {SplashPage} from "../splash/splash";
 import {ServiciosProvider} from '../../providers/servicios/servicios';
+import {AccionesProvider} from "../../providers/servicios/acciones";
 
 /**
  * Generated class for the LoginPage page.
@@ -17,13 +18,16 @@ import {ServiciosProvider} from '../../providers/servicios/servicios';
  @Component({
  	selector: 'page-login',
  	templateUrl: 'login.html',
- 	providers:[ServiciosProvider]
+ 	providers:[ServiciosProvider,AccionesProvider]
  })
  export class LoginPage implements OnInit{
 
  	public usuario = { email : '', password : ''};
 
- 	constructor(private servicioDB:ServiciosProvider,public toastCtrl : ToastController,public modalCtrl: ModalController){
+ 	constructor(private servicioDB:ServiciosProvider,public toastCtrl : ToastController,
+              public modalCtrl: ModalController,
+              public loading:AccionesProvider
+  ){
  	}
 
  	ngOnInit(){
@@ -35,7 +39,10 @@ import {ServiciosProvider} from '../../providers/servicios/servicios';
  	}
 
  	continuar(){
+ 	  this.loading.show('Autenticando por favor espere...');
+
  		this.servicioDB.login(this.usuario.email,this.usuario.password ).then((user:any) => {
+ 		  this.loading.hide();
  			console.log("user", user);
  		})
  		.catch(err=>{
