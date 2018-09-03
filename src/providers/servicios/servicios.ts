@@ -68,4 +68,8 @@ import * as firebase from 'firebase/app';
 		get Session(){
 			return this.afAuth.authState;
 		}
+
+
+
+
 	}

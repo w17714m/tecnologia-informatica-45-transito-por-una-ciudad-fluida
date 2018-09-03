@@ -9,14 +9,14 @@ import { MenuInferiorResenaComponent } from './menu-inferior-resena/menu-inferio
 	declarations: [RegisterComponent,
     MenuInferiorComponent,
     LineaMenuComponent,
-    MenuOpcionesComponent,
+   // MenuOpcionesComponent,
     MenuInferiorResenaComponent],
 	imports: [
   ],
 	exports: [RegisterComponent,
     MenuInferiorComponent,
     LineaMenuComponent,
-    MenuOpcionesComponent,
+    //MenuOpcionesComponent,
     MenuInferiorResenaComponent]
 })
 export class ComponentsModule {}

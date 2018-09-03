@@ -11,12 +11,6 @@ import { Component } from '@angular/core';
   templateUrl: 'menu-inferior-resena.html',
 })
 export class MenuInferiorResenaComponent {
-
-  text: string;
-
   constructor() {
-    console.log('Hello MenuInferiorResenaComponent Component');
-    this.text = 'Hello World';
   }
-
 }

@@ -1,0 +1,45 @@
+<!--
+  Generated template for the ModalResenaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title text-center>Reseña</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label color="primary" floating>Descripción leve del lugar</ion-label>
+    </ion-item>
+      <textarea class="textareas"  placeholder="Ingrese aquí alguna observación del lugar." value="{{descripcion}}"></textarea>
+
+    <div class="img-container">
+      <img src="assets/imgs/camera.png" (click)="tomarFoto()">
+    </div>
+
+    <div class="img-container" *ngIf="showImage">
+      <img [src]="stringImage">
+    </div>
+
+    <ion-item>
+      <ion-label>Calificación Accesibilidad</ion-label>
+      <ion-select [(ngModel)]="calificacion" multiple="false" cancelText="Cancelar" okText="Seleccionar">
+        <ion-option value="1" >Accesibilidad Baja<img src="'assets/svgs/red.svg" style="width: 18px;height: 18px"></ion-option>
+        <ion-option value="2" >Accesibilidad Media</ion-option>
+        <ion-option value="3" >Accesibilidad alta</ion-option>
+
+      </ion-select>
+    </ion-item>
+
+<div text-center>
+  <button ion-button class="width-button botonLogin" (click)="dismiss()">Guardar</button>
+</div>
+  </ion-list>
+</ion-content>

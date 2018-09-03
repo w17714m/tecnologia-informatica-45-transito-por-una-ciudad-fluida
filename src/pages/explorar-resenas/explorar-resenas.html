@@ -1,5 +1,41 @@
-<menu-opciones [variableContenedor]="menuResenia"></menu-opciones>
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons left>
+      <button ion-button icon-only color="royal" (click)="toogleNav()">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title class="center-title" text-center >Reseña</ion-title>
+    <ion-buttons right>
+      <button ion-button icon-only color="royal"  (click)="logout()"   navPop>
+        <ion-icon name="md-exit"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
 
-<ion-content #menuResenia>
-<h1>Reseñas</h1>
+<menu-opciones [variableContenedor]="menuPrincipal"></menu-opciones>
+
+<ion-content #menuPrincipal>
+  <agm-map   [styles]="style" [latitude]="4.686222" [longitude]="-74.059723" [streetViewControl]="false"
+             [zoom]="15"  (mapDblClick)="addResena($event)">
+    <agm-marker [iconUrl]="marker.orange"  [latitude]="4.686222" [longitude]="-74.059723">
+      <agm-snazzy-info-window [maxWidth]="200" [closeWhenOthersOpen]="true">
+        <ng-template>
+          <div class="container">
+            <div class="custom-img" style="background-image: url(./assets/svgs/orange.svg); width: 50px;height: 50px; text-align: center"></div>
+          </div>
+          <section class="custom-content">
+            <h1 class="custom-header">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, rem!
+              <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, deserunt.</small>
+            </h1>
+            <div class="custom-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto eligendi expedita facilis, id illum impedit molestias nesciunt porro possimus quam sit veniam voluptas voluptates. Deserunt illum minus porro ratione soluta. A autem consequatur dicta, fugit illum impedit ipsam iste itaque iure magnam magni molestiae nemo nihil nostrum odio omnis optio pariatur provident repellat repellendus sapiente ut, vel vero. Ad aliquid amet architecto asperiores aut consequuntur debitis doloribus ea eveniet facilis fuga harum illo, ipsa iusto laboriosam laudantium magnam nemo perferendis placeat porro quasi quia quibusdam quod quos suscipit velit vitae. Aliquam beatae cupiditate eos ex in laudantium obcaecati optio voluptate?</div>
+          </section>
+        </ng-template>
+      </agm-snazzy-info-window>
+    </agm-marker>
+  </agm-map>
+<menu-inferior-resena></menu-inferior-resena>
+
 </ion-content>

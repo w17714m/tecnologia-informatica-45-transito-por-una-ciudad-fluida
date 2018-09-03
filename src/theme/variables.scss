@@ -265,7 +265,7 @@ ion-item.item {
 
 
 .width-button{
-  width: 327pt;
+  width: 227pt;
   height: 52pt !important;
   border-radius: 12pt !important;
   font-family: 'Muli' !important;
@@ -303,7 +303,7 @@ ion-item.item {
 /* GRID */
 
 /* CONTAINER */
-.container {
+.container-grid {
   margin-left: auto;
   margin-right: auto;
   padding-left: 20pt;
@@ -331,11 +331,11 @@ ion-item.item {
 
 /* ROW */
 .row {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 15pt;
-  grid-row-gap: 20pt;
-  margin:  25pt 0 ;
+  display: grid !important;
+  grid-template-columns: repeat(12, 1fr) !important;
+  grid-gap: 15pt !important;
+  grid-row-gap: 20pt !important;
+  margin:  25pt 0 !important;
 }
 
 
@@ -560,4 +560,76 @@ ion-item.item {
 
 .succesToast .toast-container{
   background:#25FF2E;
+}
+
+.center-title{
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.center-title>*{
+  position:relative;
+  margin: 0 !important;
+  padding: 0 !important;
+  left: -10px;
+}
+
+
+
+.button-menu{
+  width: 100%;
+  height: 77pt;
+  border-radius: 8px;
+  background-color: #353A50;
+  text-align: center;
+}
+
+
+
+.h3{
+  font-family: Muli;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.flex-bton{
+  display: flex !important;
+  flex-direction: column !important;
+  flex-wrap: nowrap !important;
+  align-content: center !important;
+  justify-content: center !important;
+}
+
+.imagen_center{
+
+  height: 24px;
+  width: 24px;
+}
+
+.texto_center{
+  justify-self: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.box1{
+  justify-self: center;
+  justify-items: center;
+  height: 44px;
+}
+
+agm-map {
+  height: calc(100% - 200pt);
+  z-index: -1;
+}
+
+
+.textareas{
+  width: 100% !important;
+  height: 250px !important;
+  border-color: blue !important;
+  border-width: 2px !important;
+  font-size: 22pt !important;
+  font-family: 'Muli' !important;
+  color: #488aff !important;
 }

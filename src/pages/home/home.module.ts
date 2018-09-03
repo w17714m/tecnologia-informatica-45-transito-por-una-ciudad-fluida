@@ -4,21 +4,21 @@ import { HomePage } from './home';
 import {AgmCoreModule} from "@agm/core";
 import {apiKeyGoogle} from "../../config/config";
 import {AgmSnazzyInfoWindowModule} from "@agm/snazzy-info-window";
-import {MenuOpcionesComponent} from "../../components/menu-opciones/menu-opciones";
-import {LineaMenuComponent} from "../../components/linea-menu/linea-menu";
+import {MenuOpcionesModule} from "../../components/menu-opciones/menu-opciones.module";
+
 
 @NgModule({
   declarations: [
     HomePage,
-    MenuOpcionesComponent,
-    LineaMenuComponent
   ],
   imports: [
     IonicPageModule.forChild(HomePage),
     AgmCoreModule.forRoot({
       apiKey: apiKeyGoogle
     }),
-    AgmSnazzyInfoWindowModule
+    AgmSnazzyInfoWindowModule,
+    MenuOpcionesModule
+
   ],
 })
 export class HomePageModule {}

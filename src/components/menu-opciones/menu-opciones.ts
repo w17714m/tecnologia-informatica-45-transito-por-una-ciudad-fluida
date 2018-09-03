@@ -1,13 +1,7 @@
 import {Component, Input} from '@angular/core';
+import {IonicPage, MenuController, NavController} from "ionic-angular";
 
-/**
- * Generated class for the MenuOpcionesComponent component.
- *
- * See https://angular.io/api/core/Component for more info on Angular
- * Components.
- */
-
-
+@IonicPage()
 @Component({
   selector: 'menu-opciones',
   templateUrl: 'menu-opciones.html',
@@ -20,8 +14,17 @@ export class MenuOpcionesComponent {
 
   text: string;
 
-  constructor() {
+  constructor(public navCtrl: NavController,public menuCtrl: MenuController) {
+    this.menuCtrl._unregister(this.menuCtrl.getMenus()[0]);
 
   }
 
+  goPage(page: string) {
+    if(this.navCtrl.getActive().name == page){
+      return;
+    }
+
+    this.navCtrl.push(page);
+
+  }
 }

@@ -1,25 +1,20 @@
 import {Component, Input} from '@angular/core';
+import {IonicPage} from "ionic-angular";
 
-/**
- * Generated class for the LineaMenuComponent component.
- *
- * See https://angular.io/api/core/Component for more info on Angular
- * Components.
- */
+@IonicPage()
 @Component({
   selector: 'linea-menu',
   templateUrl: 'linea-menu.html',
 })
 export class LineaMenuComponent {
 
-  text: string;
+
 
   @Input()
   recta:boolean = false;
 
   constructor() {
-    console.log('Hello LineaMenuComponent Component');
-    this.text = 'Hello World';
+
   }
 
 }

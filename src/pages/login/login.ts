@@ -1,11 +1,9 @@
 import {Component,OnInit} from '@angular/core';
-import {AlertController, IonicPage, ModalController, NavController, NavParams,ToastController } from 'ionic-angular';
-import {LoginUserProvider} from "../../providers/login-user/login-user";
-import {RegisterComponent} from "../../components/register/register";
-import {HomePage} from "../home/home";
-import {SplashPage} from "../splash/splash";
+import {IonicPage, ModalController,ToastController } from 'ionic-angular';
 import {ServiciosProvider} from '../../providers/servicios/servicios';
 import {AccionesProvider} from "../../providers/servicios/acciones";
+import { Storage } from '@ionic/storage';
+import {Almacenamiento, VARIABLES} from "../../providers/servicios/almacenamiento";
 
 /**
  * Generated class for the LoginPage page.
@@ -18,7 +16,7 @@ import {AccionesProvider} from "../../providers/servicios/acciones";
  @Component({
  	selector: 'page-login',
  	templateUrl: 'login.html',
- 	providers:[ServiciosProvider,AccionesProvider]
+ 	providers:[ServiciosProvider,AccionesProvider,Almacenamiento]
  })
  export class LoginPage implements OnInit{
 
@@ -26,7 +24,8 @@ import {AccionesProvider} from "../../providers/servicios/acciones";
 
  	constructor(private servicioDB:ServiciosProvider,public toastCtrl : ToastController,
               public modalCtrl: ModalController,
-              public loading:AccionesProvider
+              public loading:AccionesProvider,
+              private storage: Almacenamiento
   ){
  	}
 
@@ -43,7 +42,9 @@ import {AccionesProvider} from "../../providers/servicios/acciones";
 
  		this.servicioDB.login(this.usuario.email,this.usuario.password ).then((user:any) => {
  		  this.loading.hide();
- 			console.log("user", user);
+ 		  console.log(user.user);
+ 			this.storage.set(VARIABLES.USER, JSON.stringify(user.user.providerData[0]));
+
  		})
  		.catch(err=>{
  			console.log("err", err);

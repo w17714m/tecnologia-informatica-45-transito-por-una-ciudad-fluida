@@ -15,6 +15,10 @@ import {config} from "../config/config";
 
 import {SplashPageModule} from "../pages/splash/splash.module";
 import {ServiciosProvider} from "../providers/servicios/servicios";
+import {IonicStorageModule} from "@ionic/storage";
+
+import { Camera } from '@ionic-native/camera';
+import { File } from '@ionic-native/file';
 
 
 
@@ -40,6 +44,7 @@ import {ServiciosProvider} from "../providers/servicios/servicios";
         }
     }
     }),
+    IonicStorageModule.forRoot(),
     SplashPageModule
   ],
   bootstrap: [IonicApp],
@@ -55,7 +60,9 @@ import {ServiciosProvider} from "../providers/servicios/servicios";
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     LoginUserProvider,
-    ServiciosProvider
+    ServiciosProvider,
+    Camera,
+    File
   ]
 })
 export class AppModule {}

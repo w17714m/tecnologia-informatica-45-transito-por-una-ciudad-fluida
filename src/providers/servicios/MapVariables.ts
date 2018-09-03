@@ -1,3 +1,5 @@
+
+
 export const styleMap = [
   {
     "featureType": "administrative",
@@ -101,3 +103,5 @@ export const markerIcons = {
       height: 50
     }
   }};
+
+

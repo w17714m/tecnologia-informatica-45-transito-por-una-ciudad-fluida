@@ -11,21 +11,18 @@
     <div class="menu"></div>
 
     <div class="container-menu">
-
-        <div class="row-menu" [navPush]="'PrincipalPage'">
+        <div class="row-menu" (click)="goPage('HomePage')">
           <div>
             <img class="icono" src="./assets/svgs/point.svg">
           </div>
           <div >Explorar</div>
         </div>
-
-      <div class="row-menu" [navPush]="'page-explorar-resenas'">
+      <div class="row-menu" (click)="goPage('ExplorarResenasPage')">
         <div>
           <img class="icono" src="./assets/svgs/corazon.svg">
         </div>
         <div >Reseñas</div>
       </div>
-
       <div class="row-menu">
         <div>
           <img class="icono" src="./assets/svgs/plan.svg">
