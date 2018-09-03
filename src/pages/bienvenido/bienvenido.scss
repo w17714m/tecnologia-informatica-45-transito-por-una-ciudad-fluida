@@ -1,3 +1,29 @@
 page-bienvenido {
 
 }
+
+.containerSlide{
+	height:100%;
+	position:relative;
+	.imageSlide{
+		height:70%;
+		img{
+			width:100%;
+		}
+		.imgLogo{
+			bottom:30%;
+			position:relative;
+		}
+	}
+	.textSlide{
+		height:30%;
+		width:100%;
+		position:absolute;
+		bottom:0px;
+	}
+}
+ion-slide .slide-zoom{
+	position:absolute;
+	top:0px;
+	height:100%;
+}

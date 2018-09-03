@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams,ToastController,LoadingController  } from 'ionic-angular';
+import { IonicPage, NavController, NavParams,ToastController,ModalController  } from 'ionic-angular';
 import {ServiciosProvider} from '../../providers/servicios/servicios';
 import {AccionesProvider} from '../../providers/servicios/acciones';
 import {HomePage} from '../home/home'
@@ -20,7 +20,8 @@ import {HomePage} from '../home/home'
 
  	public usuario = { email : '', password : ''};
 
- 	constructor(public navCtrl: NavController, public navParams: NavParams,private servicioDB:ServiciosProvider,public toastCtrl : ToastController,private accion:AccionesProvider) {
+ 	constructor(public navCtrl: NavController, public navParams: NavParams,private servicioDB:ServiciosProvider,public toastCtrl : ToastController,private accion:AccionesProvider,
+ 			public modalCtrl: ModalController) {
  	}
 
  	ionViewDidLoad() {
@@ -36,12 +37,14 @@ import {HomePage} from '../home/home'
       setTimeout(()=>{      	
 	      let toast = this.toastCtrl.create({
 	      	message: 'Se ha creado con exito',
-	      	duration: 2000,
+	      	duration: 1500,
 	      	cssClass: "succesToast",
 	      });
 	      toast.present();
       	this.usuario = { email : '', password : ''};
-      	this.navCtrl.push('HomePage');
+      	//this.navCtrl.push('HomePage');
+		 		let profileModal = this.modalCtrl.create('BienvenidoPage');
+		 		profileModal.present();
       },3000);
     })
  		.catch((err)=>{

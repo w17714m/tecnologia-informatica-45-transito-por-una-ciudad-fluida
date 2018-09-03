@@ -18,7 +18,7 @@ export class MyApp {
       this.auth.Session.subscribe(session=>{
   
         if(session){
-            this.rootPage = 'HomePage';
+            this.rootPage = 'BienvenidoPage';
         }else{
             this.rootPage = 'SplashPage';
         }
