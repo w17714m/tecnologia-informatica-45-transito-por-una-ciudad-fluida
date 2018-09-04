@@ -66,7 +66,7 @@ import * as firebase from 'firebase/app';
 		}
 		// Devuelve la session
 		get Session(){
-			return this.afAuth.authState;
+			return this.afAuth.user;
 		}
 
 

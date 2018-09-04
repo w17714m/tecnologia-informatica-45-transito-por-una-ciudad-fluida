@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {AlertController, IonicPage, NavController, NavParams, ViewController} from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import {Entry, File} from '@ionic-native/file';
+import {ServiciosProvider} from "../../providers/servicios/servicios";
 
 @IonicPage()
 @Component({
@@ -22,17 +23,22 @@ export class ModalResenaPage {
 
   descripcion:string;
   calificacion:string;
-  foto:string;
   dataRecibida:any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,
-              public viewCtrl: ViewController,
-              private camera: Camera,private alertCtrl:AlertController,
-              private file: File) {
+  constructor(
+      public navCtrl: NavController, public navParams: NavParams,
+      public viewCtrl: ViewController,
+      private camera: Camera,private alertCtrl:AlertController,
+      private file: File,
+      private service:ServiciosProvider
+  ) {
   }
 
   ionViewDidLoad() {
      this.dataRecibida = this.navParams.get('coord');
+     this.stringImage = '';
+     this.descripcion = '';
+     this.calificacion = '';
   }
 
   dismiss() {
@@ -48,8 +54,18 @@ export class ModalResenaPage {
       return;
     }
 
-    let data = { descripcion: this.descripcion, calificacion:this.calificacion,dataRecibida: this.dataRecibida,imagen:this.stringImage};
-    this.viewCtrl.dismiss(data);
+
+    this.service.Session.subscribe((result)=>{
+
+      let data = {
+        descripcion: this.descripcion,
+        calificacion:this.calificacion,
+        cordenadas: this.dataRecibida.coords,
+        imagen:this.stringImage,
+        user:result.email
+      };
+      this.viewCtrl.dismiss(data);
+    });
   }
 
   tomarFoto(){
@@ -69,6 +85,4 @@ export class ModalResenaPage {
        console.log('No se pudo capturar la fotografía');
     });
   }
-
-
 }

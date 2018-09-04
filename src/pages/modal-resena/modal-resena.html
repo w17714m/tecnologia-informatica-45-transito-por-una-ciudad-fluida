@@ -18,7 +18,7 @@
     <ion-item>
       <ion-label color="primary" floating>Descripción leve del lugar</ion-label>
     </ion-item>
-      <textarea class="textareas"  placeholder="Ingrese aquí alguna observación del lugar." value="{{descripcion}}"></textarea>
+      <textarea class="textareas"  placeholder="Ingrese aquí alguna observación del lugar." [(ngModel)]="descripcion" ></textarea>
 
     <div class="img-container">
       <img src="assets/imgs/camera.png" (click)="tomarFoto()">
@@ -28,18 +28,33 @@
       <img [src]="stringImage">
     </div>
 
-    <ion-item>
-      <ion-label>Calificación Accesibilidad</ion-label>
-      <ion-select [(ngModel)]="calificacion" multiple="false" cancelText="Cancelar" okText="Seleccionar">
-        <ion-option value="1" >Accesibilidad Baja<img src="'assets/svgs/red.svg" style="width: 18px;height: 18px"></ion-option>
-        <ion-option value="2" >Accesibilidad Media</ion-option>
-        <ion-option value="3" >Accesibilidad alta</ion-option>
+    <div class="row">
+      <div class="col-xs-8 col-md-8 col-sm-8">
+        <ion-item>
+          <ion-label>Calificación Accesibilidad</ion-label>
+          <ion-select [(ngModel)]="calificacion" multiple="false" cancelText="Cancelar" okText="Seleccionar">
+            <ion-option value="1" >Accesibilidad Baja</ion-option>
+            <ion-option value="2" >Accesibilidad Media </ion-option>
+            <ion-option value="3" >Accesibilidad alta</ion-option>
+          </ion-select>
+        </ion-item>
+      </div>
+      <div class="col-xs-4 col-md-4 col-sm-4 center-grid">
+        <img src="assets/svgs/red.svg" *ngIf="calificacion==1" style="width: 50px;height: 50px">
+        <img src="assets/svgs/orange.svg" *ngIf="calificacion==2" style="width: 50px;height: 50px">
+        <img src="assets/svgs/green.svg" *ngIf="calificacion==3" style="width: 50px;height: 50px">
+        <br>
+        <div style="text-align: center;">
+          <h3 style="text-align: center;background-color: {{calificacion==1?'red':(calificacion==2?'orange':'green')}}">
+            {{calificacion==1?'Accesibilidad Baja':(calificacion==2?'Accesibilidad Media':(calificacion==3?'Accesibilidad Alta':'Calificación'))}}
+          </h3>
+        </div>
+      </div>
+    </div>
 
-      </ion-select>
-    </ion-item>
-
+    <br>
 <div text-center>
-  <button ion-button class="width-button botonLogin" (click)="dismiss()">Guardar</button>
+  <button ion-button class="width-button botonLogin" (click)="dismiss()"  [disabled]="calificacion==''">Guardar</button>
 </div>
   </ion-list>
 </ion-content>

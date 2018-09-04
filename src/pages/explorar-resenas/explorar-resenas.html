@@ -17,24 +17,30 @@
 <menu-opciones [variableContenedor]="menuPrincipal"></menu-opciones>
 
 <ion-content #menuPrincipal>
-  <agm-map   [styles]="style" [latitude]="4.686222" [longitude]="-74.059723" [streetViewControl]="false"
+
+
+  <agm-map [styles]="style" [latitude]="4.685789659010489" [longitude]="-74.06390221757619" [streetViewControl]="false"
              [zoom]="15"  (mapDblClick)="addResena($event)">
-    <agm-marker [iconUrl]="marker.orange"  [latitude]="4.686222" [longitude]="-74.059723">
+
+
+    <agm-marker *ngFor="let value of points | async" [iconUrl]="(value.calificacion==1?marker.red:(value.calificacion==2?marker.orange:marker.green))"  [latitude]="value.cordenadas.lat" [longitude]="value.cordenadas.lng">
       <agm-snazzy-info-window [maxWidth]="200" [closeWhenOthersOpen]="true">
         <ng-template>
-          <div class="container">
-            <div class="custom-img" style="background-image: url(./assets/svgs/orange.svg); width: 50px;height: 50px; text-align: center"></div>
+
+          <div class="custom-img">
+            <img  *ngIf="value.image" src="{{'data:image/jpeg;base64,'+value.imagen}}" style="width: 150px;height: 150px">
           </div>
           <section class="custom-content">
             <h1 class="custom-header">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, rem!
-              <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, deserunt.</small>
+
             </h1>
-            <div class="custom-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto eligendi expedita facilis, id illum impedit molestias nesciunt porro possimus quam sit veniam voluptas voluptates. Deserunt illum minus porro ratione soluta. A autem consequatur dicta, fugit illum impedit ipsam iste itaque iure magnam magni molestiae nemo nihil nostrum odio omnis optio pariatur provident repellat repellendus sapiente ut, vel vero. Ad aliquid amet architecto asperiores aut consequuntur debitis doloribus ea eveniet facilis fuga harum illo, ipsa iusto laboriosam laudantium magnam nemo perferendis placeat porro quasi quia quibusdam quod quos suscipit velit vitae. Aliquam beatae cupiditate eos ex in laudantium obcaecati optio voluptate?</div>
+            <div class="custom-body">{{value.descripcion}}</div>
           </section>
         </ng-template>
       </agm-snazzy-info-window>
     </agm-marker>
+
+
   </agm-map>
 <menu-inferior-resena></menu-inferior-resena>
 
